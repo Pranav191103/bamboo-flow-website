@@ -330,6 +330,17 @@
       letter-spacing: 0.09em;
     }
 
+    .hero-card-right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .hero-card-goal {
+      max-width: 260px;
+      margin-left: auto;
+    }
+
     /* Sections */
 
     section {
@@ -424,7 +435,7 @@
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-bottom: 45%; /* enlarged height */
+      padding-bottom: 60%; /* Taller = feels bigger */
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(123, 216, 143, 0.5);
@@ -675,7 +686,7 @@
           <a href="#gallery">Gallery</a>
           <a href="#video">Video</a>
           <a href="#process">Process</a>
-          <a href="#tech">Tech & Materials</a>
+          <a href="#tech">Tech &amp; Materials</a>
           <a href="#team">Team</a>
           <a href="#links">Links</a>
         </div>
@@ -693,7 +704,7 @@
                 <span>BambooFlow · Eat Healthy</span>
               </div>
               <span style="font-size: 0.8rem; color: var(--muted);">
-                Modular Hydroponic System · Final Project
+                Final Project — Modular Hydroponic System
               </span>
             </div>
             <h1>
@@ -702,8 +713,8 @@
             </h1>
             <p class="hero-tagline">
               BambooFlow is a modular hydroponic system that lets you grow fresh vegetables directly in your
-              kitchen. Connect one or many bamboo-inspired modules and let the system circulate nutrient-rich
-              solution for soil-free, low-maintenance, homegrown food.
+              kitchen. Connect one or many bamboo-inspired modules and let the system automatically circulate
+              nutrient-rich solution for soil-free, low-maintenance, homegrown food.
             </p>
 
             <div class="hero-meta">
@@ -730,12 +741,12 @@
 
             <div class="hero-actions">
               <div class="btn-primary">
-                <span>●</span>
+                <span class="icon">●</span>
                 <span>Demo video embedded below</span>
               </div>
               <div class="btn-ghost">
-                <span>⌘</span>
-                <span>Scroll to see process, iterations & gallery</span>
+                <span class="icon">⌘</span>
+                <span>Scroll to see process, iterations &amp; gallery</span>
               </div>
             </div>
           </div>
@@ -751,7 +762,8 @@
                     functional food system and a serene visual object in the home.
                   </p>
                   <p>
-                    Designed for <strong>automation</strong> and <strong>scalability</strong> from a single module to an entire wall.
+                    Designed for <strong>automation</strong> and <strong>scalability</strong> from a single module to an
+                    entire wall.
                   </p>
                   <div class="hero-card-tags">
                     <div class="hero-card-tag">Hydroponic</div>
@@ -759,9 +771,11 @@
                     <div class="hero-card-tag">Wall-mounted</div>
                   </div>
                 </div>
-                <div class="pill" style="align-self: center;">
-                  <span class="pill-label">Goal</span>
-                  <span class="pill-value">Toward ~95% automated care</span>
+                <div class="hero-card-right">
+                  <div class="pill hero-card-goal">
+                    <span class="pill-label">Goal</span>
+                    <span class="pill-value">Up to ~95% automated plant care from seed to harvest.</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -769,12 +783,12 @@
         </div>
       </section>
 
-      <!-- PURPOSE & USERS -->
+      <!-- PURPOSE & INTENDED USERS -->
       <section>
         <div class="section-header">
           <div class="section-title">
             <span class="icon">🌱</span>
-            <span>Purpose & Intended Users</span>
+            <span>Purpose &amp; Intended Users</span>
           </div>
           <div class="section-kicker">Project Description</div>
         </div>
@@ -803,7 +817,9 @@
             <ul>
               <li>Functionality — Can it reliably grow plants from seed to harvest?</li>
               <li>Aesthetics — Does it look calm and natural enough to live on a wall?</li>
-              <li>Accessibility — Can non-experts install, monitor, and maintain it?</li>
+              <li>
+                Accessibility — Can non-experts install, monitor, and maintain it without specialized tools?
+              </li>
             </ul>
           </div>
         </div>
@@ -816,63 +832,63 @@
             <span class="icon">🖼️</span>
             <span>Gallery</span>
           </div>
-          <div class="section-kicker">Sketches, Prototypes & Final System</div>
+          <div class="section-kicker">Sketches, Prototypes &amp; Final System</div>
         </div>
         <p>
-          The gallery below documents the evolution of BambooFlow, from early concept sketches to physical prototypes
-          and the final assembled system.
+          A visual walkthrough of BambooFlow’s evolution — from early sketches to disassembled parts, mechanism
+          tests, and the final assembled system.
         </p>
 
         <div class="gallery-grid">
-          <!-- 1: Early sketch -->
+          <!-- IMAGE 1: EARLY SKETCH -->
           <div class="gallery-item">
             <div class="gallery-tag">Sketch</div>
             <img
               src="sketch-1.jpg.png"
-              alt="Early concept sketches for modular bamboo hydroponic system"
+              alt="Early concept sketch for BambooFlow modular hydroponic system"
             />
             <div class="gallery-caption">
-              Early concept sketches exploring modular, bamboo-inspired geometry and connection mechanisms for an indoor
+              Early concept sketches exploring bamboo-inspired modular geometry and connection design for the
               hydroponic system.
             </div>
           </div>
 
-          <!-- 2: Prototype build -->
+          <!-- IMAGE 2: DISASSEMBLED PARTS -->
           <div class="gallery-item">
-            <div class="gallery-tag">Prototype</div>
+            <div class="gallery-tag">Disassembled Parts</div>
             <img
               src="Image 2.jpeg"
-              alt="BambooFlow prototype build with partial assembly and testing"
+              alt="Disassembled bamboo module with gasket, valve housing, and printed parts"
             />
             <div class="gallery-caption">
-              Mid-stage prototype showing partial assembly, testing how the modules fit together and how the structure
-              performs under real-world conditions.
+              Disassembled module showing the gasket ring, valve housing, 3D-printed interfaces, and bamboo shell
+              used to test sealing and assembly.
             </div>
           </div>
 
-          <!-- 3: Mechanism / detail -->
+          <!-- IMAGE 3: MECHANISM -->
           <div class="gallery-item">
             <div class="gallery-tag">Mechanism</div>
             <img
-              src="Image 4.jpeg"
-              alt="Detail of BambooFlow mechanism, seals and structure"
+              src="Image 3.jpeg"
+              alt="Mechanism and valve testing for BambooFlow hydroponic module"
             />
             <div class="gallery-caption">
-              Close-up of mechanical details, including sealing strategies and structural interfaces that manage
-              water flow between modules.
+              Mechanism testing of the spring-loaded valve and internal plumbing, demonstrating how water flow
+              is regulated between modules.
             </div>
           </div>
 
-          <!-- 4: Final system -->
+          <!-- IMAGE 4: FINAL SYSTEM -->
           <div class="gallery-item">
-            <div class="gallery-tag">Final</div>
+            <div class="gallery-tag">Final System</div>
             <img
-              src="Image 3.jpeg"
-              alt="Final BambooFlow system assembly"
+              src="Image 4.jpeg"
+              alt="Final BambooFlow system fully assembled and functioning"
             />
             <div class="gallery-caption">
-              Final BambooFlow assembly with modules connected and arranged as an indoor hydroponic system, ready for
-              user testing and evaluation.
+              Final BambooFlow assembly with modules connected and ready for early growth trials, evaluating
+              aesthetics, structural integrity, and user interaction.
             </div>
           </div>
         </div>
@@ -887,6 +903,7 @@
           </div>
           <div class="section-kicker">FP1.4 Final Video</div>
         </div>
+
         <p>
           This video demonstrates BambooFlow in action, including system assembly, modular connections, and fluid
           circulation behavior across one or more modules.
@@ -907,7 +924,7 @@
         <div class="section-header">
           <div class="section-title">
             <span class="icon">🧩</span>
-            <span>Design Process & Iterations</span>
+            <span>Design Process &amp; Iterations</span>
           </div>
           <div class="section-kicker">From Idea to Working Prototype</div>
         </div>
@@ -918,84 +935,92 @@
         </p>
 
         <div class="process-timeline">
+          <!-- Round 1 -->
           <div class="process-item">
             <div class="process-dot"></div>
-            <div class="process-item-sub">Round 1 · Concept & Ideation</div>
-            <div class="process-item-title">Brainstorming & Bamboo as Design Language</div>
+            <div class="process-item-sub">Round 1 · Concept &amp; Ideation</div>
+            <div class="process-item-title">Brainstorming &amp; Bamboo as Design Language</div>
             <p>
               We explored how bamboo could be used not only as a visual motif, but also as structural inspiration
               for modular hydroponic design—a calm, natural form that fits comfortably on a wall.
             </p>
           </div>
 
+          <!-- Round 2 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 2 · Early Sketching</div>
             <div class="process-item-title">Magnet-Based Modular Connections</div>
             <p>
-              Early sketches introduced strong magnets and tension cables to connect modules securely while keeping
-              end caps aligned and sealed, supporting future scalability.
+              Mengyuan Xiong’s sketches introduced strong magnets and tension cables to connect modules securely
+              while keeping end caps aligned and sealed. This helped frame BambooFlow as a scalable modular system.
             </p>
           </div>
 
+          <!-- Round 3 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 3 · Rethinking Water Storage</div>
             <div class="process-item-title">Basin-Based Hydroponic Reservoir</div>
             <p>
-              We explored a basin-based reservoir to hold most of the hydroponic solution, simplifying maintenance
-              and better supporting multi-module configurations.
+              Josh D. Kirby’s basin concept simplified long-term maintenance and supported a larger water volume,
+              making multi-module setups more feasible and compatible with future plumbing integration.
             </p>
           </div>
 
+          <!-- Round 4 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 4 · End Cap Experiments</div>
             <div class="process-item-title">Sloped vs. Non-Sloped End Caps</div>
             <p>
-              Foam mockups and 3D printed caps allowed us to evaluate sealing performance, gasket placement, and how
-              to prevent bamboo splitting under pressure.
+              We tested foam mockups and multiple 3D printed caps, comparing sloped and non-sloped geometries for
+              sealing performance, bamboo-splitting prevention, and overall aesthetics.
             </p>
           </div>
 
+          <!-- Round 5 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 5 · Nozzle Mechanism</div>
-            <div class="process-item-title">Leak Testing & Spring Valve Integration</div>
+            <div class="process-item-title">Leak Testing &amp; Spring Valve Integration</div>
             <p>
               Iterations explored tube tightness, leak prevention, screw-based actuation, and a twist mechanism
-              for more reliable sealing and user-friendly operation.
+              for more reliable sealing when controlling water flow between modules.
             </p>
           </div>
 
+          <!-- Round 6 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 6 · Spring Valve Refinement</div>
             <div class="process-item-title">O-Ring Integration for Watertight Seals</div>
             <p>
-              Partial prints helped refine tolerances. Adding O-rings reduced micro-leaks and significantly improved
-              water-tightness across multiple test conditions.
+              Printing partial sections helped refine tolerances. Adding O-rings reduced micro-leaks and
+              significantly improved water-tightness in the spring valve assembly.
             </p>
           </div>
 
+          <!-- Round 7 -->
           <div class="process-item">
             <div class="process-dot"></div>
-            <div class="process-item-sub">Round 7 · Plant Growth & Automation</div>
+            <div class="process-item-sub">Round 7 · Plant Growth &amp; Automation</div>
             <div class="process-item-title">Toward ~95% Automation</div>
             <p>
-              We experimented with germinating seeds directly in the system, tuning water/oxygen/nutrient balance, and
-              exploring automatic lighting adjustments to reduce day-to-day user effort.
+              We tested germination directly in the system, optimized water/oxygen/nutrient balance, and
+              explored ideas for automatic lighting adjustment to reduce user intervention to planting and harvesting.
             </p>
           </div>
 
+          <!-- Reflection -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Reflection</div>
-            <div class="process-item-title">Successes, Challenges & Learnings</div>
+            <div class="process-item-title">Successes, Challenges &amp; Learnings</div>
             <p>
               Iterating on valves, caps, and mechanisms taught us how small design changes affect durability,
-              sealing, manufacturability, and user experience. With more time, we would continue refining lighting
-              automation, basin plumbing integration, and lower-cost manufacturing paths.
+              sealing, manufacturability, and user experience. With more time, we would refine lighting automation,
+              basin plumbing integration, and lower-cost manufacturing paths for broader accessibility.
             </p>
           </div>
         </div>
@@ -1006,16 +1031,16 @@
         <div class="section-header">
           <div class="section-title">
             <span class="icon">🛠️</span>
-            <span>Technology, Materials & Components</span>
+            <span>Technology, Materials &amp; Components</span>
           </div>
-          <div class="section-kicker">Hardware, Electronics & Software</div>
+          <div class="section-kicker">Hardware, Electronics &amp; Software</div>
         </div>
 
         <div class="two-col">
           <div>
-            <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Key Hardware & Electronics</h3>
+            <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Key Hardware &amp; Electronics</h3>
             <ul>
-              <li>4.0” and 3.0” bamboo shoots serving as the hydroponic module shells.</li>
+              <li>4.0&quot; and 3.0&quot; bamboo shoots serving as the hydroponic module shells.</li>
               <li>Submersible water pump for circulating nutrient solution.</li>
               <li>LED grow lights for plant development in indoor conditions.</li>
               <li>Gasket materials, rubber washers, and O-rings for watertight sealing.</li>
@@ -1032,7 +1057,7 @@
               <div class="pill-small">Grow lights</div>
             </div>
 
-            <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1rem;">Software & Design Tools</h3>
+            <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1rem;">Software &amp; Design Tools</h3>
             <ul>
               <li><strong>Fusion 360</strong> — 3D modeling end caps, nozzles, valves.</li>
               <li><strong>Adobe Illustrator</strong> — SVG layout and laser-cut patterns.</li>
@@ -1040,6 +1065,7 @@
             </ul>
           </div>
 
+          <!-- TABLE -->
           <div>
             <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Component Cost Breakdown</h3>
             <div class="table-wrap">
@@ -1054,14 +1080,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>(Unavailable) 4.0” bamboo shoot</td><td>$64.00</td><td>1</td><td>$64.00</td><td>Reference pricing</td></tr>
-                  <tr><td>4.0” bamboo shoot</td><td>$27.43</td><td>2</td><td>$27.43</td><td>Main modules</td></tr>
-                  <tr><td>3.0” bamboo shoot</td><td>$24.54</td><td>1</td><td>$24.54</td><td>Additional module</td></tr>
+                  <tr><td>(Unavailable) 4.0&quot; bamboo shoot</td><td>$64.00</td><td>1</td><td>$64.00</td><td>Reference pricing</td></tr>
+                  <tr><td>4.0&quot; bamboo shoot</td><td>$27.43</td><td>2</td><td>$27.43</td><td>Main modules</td></tr>
+                  <tr><td>3.0&quot; bamboo shoot</td><td>$24.54</td><td>1</td><td>$24.54</td><td>Additional module</td></tr>
                   <tr><td>Hydroponic solution</td><td>$11.97</td><td>1</td><td>$11.97</td><td>Nutrient mix</td></tr>
                   <tr><td>Rigid tubing (96 mm ID)</td><td>$13.99</td><td>1</td><td>$13.99</td><td>End cap testing</td></tr>
                   <tr><td>Rigid tubing (76 mm ID)</td><td>$9.99</td><td>1</td><td>$9.99</td><td>Alternate geometry</td></tr>
                   <tr><td>Gasket material</td><td>$15.68</td><td>1</td><td>$15.68</td><td>Seal fabrication</td></tr>
-                  <tr><td>M6 rubber washers</td><td>$7.10</td><td>1</td><td>$7.10</td><td>Vibration & sealing</td></tr>
+                  <tr><td>M6 rubber washers</td><td>$7.10</td><td>1</td><td>$7.10</td><td>Vibration &amp; sealing</td></tr>
                   <tr><td>Variety seeds</td><td>$9.94</td><td>1</td><td>$9.94</td><td>Plant growth testing</td></tr>
                   <tr><td>Submersible pump</td><td>$21.96</td><td>1</td><td>$21.96</td><td>Circulation system</td></tr>
                   <tr><td>LED grow light</td><td>$9.80</td><td>1</td><td>$9.80</td><td>Indoor lighting</td></tr>
@@ -1086,9 +1112,9 @@
         <div class="section-header">
           <div class="section-title">
             <span class="icon">⚙️</span>
-            <span>Challenges & Innovative Directions</span>
+            <span>Challenges &amp; Innovative Directions</span>
           </div>
-          <div class="section-kicker">What We Struggled With & What’s Next</div>
+          <div class="section-kicker">What We Struggled With &amp; What’s Next</div>
         </div>
 
         <div class="two-col">
@@ -1142,7 +1168,7 @@
         <div class="team-grid">
           <div class="team-card">
             <div class="team-name">Pranav Chowdary Devabathini</div>
-            <div class="team-role">System Integration & Electronics</div>
+            <div class="team-role">System Integration &amp; Electronics</div>
             <div class="team-text">
               Integrated the pump, power systems, and control electronics. Validated water-flow behavior and
               documented the full build process and experiments.
@@ -1151,7 +1177,7 @@
 
           <div class="team-card">
             <div class="team-name">Josh D. Kirby</div>
-            <div class="team-role">Mechanical Design & Basin Architecture</div>
+            <div class="team-role">Mechanical Design &amp; Basin Architecture</div>
             <div class="team-text">
               Explored basin-based hydroponic reservoirs, connection geometry, and structural layout for modular,
               scalable installations.
@@ -1160,7 +1186,7 @@
 
           <div class="team-card">
             <div class="team-name">Mengyuan (Yuan) Xiong</div>
-            <div class="team-role">Concept Sketching & Visual Design</div>
+            <div class="team-role">Concept Sketching &amp; Visual Design</div>
             <div class="team-text">
               Led early sketches, explored magnet-based connections, and shaped BambooFlow’s calm, natural
               bamboo-inspired aesthetic.
@@ -1174,14 +1200,14 @@
         <div class="section-header">
           <div class="section-title">
             <span class="icon">🔗</span>
-            <span>Links, References & Further Reading</span>
+            <span>Links, References &amp; Further Reading</span>
           </div>
           <div class="section-kicker">External Resources</div>
         </div>
 
         <div class="two-col">
           <div>
-            <h3 style="margin-bottom: .4rem;">Research & Inspiration</h3>
+            <h3 style="margin-bottom: .4rem;">Research &amp; Inspiration</h3>
             <ul>
               <li>
                 Gasket selection guide:
@@ -1189,7 +1215,7 @@
                   What Is The Correct Gasket Material For Your Next Project?
                 </a>
               </li>
-              <li>Hydroponics learning resources & online plant-care guides.</li>
+              <li>Hydroponics learning resources &amp; online plant-care guides.</li>
               <li>Comparable indoor garden and modular agriculture systems.</li>
             </ul>
 
