@@ -312,30 +312,507 @@
       color: var(--muted);
       margin: 0 0 0.75rem;
     }
-    .hero-card-left p {
-  font-size: 0.86rem;
-  color: var(--muted);
-  margin: 0 0 0.75rem;
-}
 
-/* >>> ADD THIS RIGHT HERE <<< */
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
 
-/* Enlarge the video */
-.video-wrapper {
-  padding-bottom: 45% !important;
-}
+    .hero-card-tag {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(4, 10, 7, 0.85);
+      border: 1px solid rgba(123, 216, 143, 0.4);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
 
-.video-wrapper iframe {
-  transform: scale(1.2);
-  transform-origin: center;
-}
+    /* Sections */
 
-</style>
+    section {
+      margin-top: 2.5rem;
+      background: rgba(5, 10, 7, 0.85);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 1.6rem 1.5rem 1.9rem;
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.55);
+    }
 
+    section + section {
+      margin-top: 1.75rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title span.icon {
+      font-size: 1.1rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0 0 0.75rem;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      background: var(--bg-alt);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 0.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .gallery-caption {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .gallery-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(9, 22, 15, 0.95);
+      border: 1px solid rgba(76, 197, 108, 0.6);
+      color: var(--accent);
+      align-self: flex-start;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    /* Video */
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 65%; /* taller video */
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(123, 216, 143, 0.5);
+      background: radial-gradient(circle at top, #193024 0, #020302 70%);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Process */
+
+    .process-timeline {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-top: 0.75rem;
+    }
+
+    .process-timeline::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 0.4rem;
+      bottom: 0.3rem;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(123, 216, 143, 0.9),
+        rgba(123, 216, 143, 0.05)
+      );
+      opacity: 0.7;
+    }
+
+    .process-item {
+      position: relative;
+      margin-bottom: 1.1rem;
+    }
+
+    .process-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .process-dot {
+      position: absolute;
+      left: -1.2rem;
+      top: 0.25rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(123, 216, 143, 0.9);
+    }
+
+    .process-item-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .process-item-sub {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Lists & table */
+
+    ul {
+      margin: 0 0 0.75rem 1.1rem;
+      padding: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.3rem;
+    }
+
+    .pill-small {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(7, 16, 11, 0.95);
+      border: 1px solid rgba(62, 95, 74, 0.9);
+      color: var(--muted);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 0.4rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      color: var(--muted);
+      min-width: 520px;
+    }
+
+    th,
+    td {
+      padding: 0.45rem 0.5rem;
+      border-bottom: 1px solid rgba(33, 46, 39, 0.9);
+      text-align: left;
+    }
+
+    th {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #c0d6c7;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: rgba(8, 16, 12, 0.7);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(8, 16, 12, 0.4);
+    }
+
+    /* Team */
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .team-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 0.9rem 0.95rem;
+    }
+
+    .team-name {
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .team-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 1.5rem 1.25rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-top: 1px solid rgba(37, 51, 42, 0.7);
+      margin-top: 1.5rem;
+    }
+
+    footer span {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-right {
+        order: -1;
+      }
+      .hero-card-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      section {
+        padding: 1.25rem 1.1rem 1.5rem;
+      }
+      .hero {
+        padding-top: 1.75rem;
+      }
+      .hero-meta {
+        flex-direction: column;
+      }
+      .table-wrap {
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        padding: 0.4rem;
+        background: rgba(5, 11, 8, 0.95);
+      }
+      table {
+        min-width: 480px;
+      }
+    }
   </style>
 </head>
 <body>
-        <!-- GALLERY -->
+  <div class="page">
+    <!-- NAV -->
+    <header>
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="logo">B</div>
+          <div class="nav-title">
+            <span>Final Project · TECHIN</span>
+            <span>BambooFlow — Modular Hydroponic System</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#video">Video</a>
+          <a href="#process">Process</a>
+          <a href="#tech">Tech &amp; Materials</a>
+          <a href="#team">Team</a>
+          <a href="#links">Links</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <!-- HERO / OVERVIEW -->
+      <section id="overview" style="background: transparent; border: none; box-shadow: none; padding: 0;">
+        <div class="hero">
+          <div>
+            <div class="badge-row">
+              <div class="badge">
+                <span class="badge-dot"></span>
+                <span>BambooFlow · Eat Healthy</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--muted);">
+                Final Project — Modular Hydroponic System
+              </span>
+            </div>
+            <h1>
+              <span class="highlight">BambooFlow</span><br />
+              Turn your kitchen into a personal farm.
+            </h1>
+            <p class="hero-tagline">
+              BambooFlow is a modular hydroponic system that lets you grow fresh vegetables directly in your
+              kitchen. Connect one or many bamboo-inspired modules and let the system automatically circulate
+              nutrient-rich solution for soil-free, low-maintenance, homegrown food.
+            </p>
+
+            <div class="hero-meta">
+              <div class="pill">
+                <span class="pill-label">Tagline</span>
+                <span class="pill-value">Eat Healthy</span>
+              </div>
+              <div class="pill">
+                <span class="pill-label">Project Type</span>
+                <span class="pill-value">Connected Hydroponic Hardware</span>
+              </div>
+              <div class="pill">
+                <span class="pill-label">Context</span>
+                <span class="pill-value">University Final Project</span>
+              </div>
+            </div>
+
+            <p>
+              Each module can function independently or as part of a larger network mounted on a wall or
+              integrated into a kitchen space. Users place seeds into the receptacles and BambooFlow takes care of
+              the rest: water circulation, nutrients, and lighting. The result is a calm, bamboo-like wall piece
+              that doubles as a practical source of fresh ingredients.
+            </p>
+
+            <div class="hero-actions">
+              <div class="btn-primary">
+                <span class="icon">●</span>
+                <span>Demo video embedded below</span>
+              </div>
+              <div class="btn-ghost">
+                <span class="icon">⌘</span>
+                <span>Scroll to see process, iterations &amp; gallery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-card">
+              <div class="hero-card-inner">
+                <div class="hero-card-left">
+                  <h2>Modular, wall-mounted hydroponics.</h2>
+                  <p>
+                    Connect multiple bamboo-inspired shoots, share water and nutrient solution between them, and
+                    tune the system for different plants and environments. BambooFlow is designed to be both a
+                    functional food system and a serene visual object in the home.
+                  </p>
+                  <p>
+                    Designed for <strong>automation</strong> and <strong>scalability</strong> from a single module to an
+                    entire wall.
+                  </p>
+                  <div class="hero-card-tags">
+                    <div class="hero-card-tag">Hydroponic</div>
+                    <div class="hero-card-tag">Modular</div>
+                    <div class="hero-card-tag">Wall-mounted</div>
+                  </div>
+                </div>
+                <div class="pill" style="max-height: 5rem;">
+                  <span class="pill-label">Goal</span>
+                  <span class="pill-value">Up to ~95% automated care</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PURPOSE & USERS -->
+      <section>
+        <div class="section-header">
+          <div class="section-title">
+            <span class="icon">🌱</span>
+            <span>Purpose &amp; Intended Users</span>
+          </div>
+          <div class="section-kicker">Project Description</div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <p>
+              BambooFlow is designed for people who want the benefits of homegrown vegetables without dealing
+              with soil, mess, or a large outdoor space. Urban renters, busy professionals, students, and
+              families in apartments often have limited access to fresh, hyper-local produce. BambooFlow
+              brings that experience indoors, directly into the kitchen or living space.
+            </p>
+            <p>
+              The system uses hydroponic techniques to circulate nutrient-rich solution through bamboo-inspired
+              modules. Users simply place seeds into a designated receptacle, and the system handles the rest:
+              water flow, nutrient delivery, and grow-light support. By focusing on both aesthetics and usability,
+              BambooFlow aims to be as much a part of the home’s interior design as it is a functional appliance.
+            </p>
+          </div>
+          <div>
+            <p>
+              From a design perspective, the project explores how modularity can make hydroponic systems more
+              flexible and scalable. A single user might start with one module and later expand to a multi-module
+              wall. Each design decision balances:
+            </p>
+            <ul>
+              <li>Functionality — Can it reliably grow plants from seed to harvest?</li>
+              <li>Aesthetics — Does it look calm and natural enough to live on a wall?</li>
+              <li>
+                Accessibility — Can non-experts install, monitor, and maintain it without specialized tools?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
       <section id="gallery">
         <div class="section-header">
           <div class="section-title">
@@ -346,17 +823,16 @@
         </div>
         <p>
           The gallery below documents the evolution of BambooFlow, from early concept sketches and foam mockups
-          through to end-cap mechanisms and modular hardware. Replace the placeholder images with your own
-          photographs and illustrations from FP1.1–FP1.4 by uploading them into the <code>images/</code> folder in GitHub.
+          through to end-cap mechanisms and modular hardware.
         </p>
 
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-tag">Sketch</div>
-            <img 
-  src="https://drive.google.com/uc?export=view&id=1-1_NWxUejgzyQV62eL6CZv_7i_4kvvcM" 
-  alt="Early concept sketches for modular bamboo hydroponic system"
-/>
+            <img
+              src="https://drive.google.com/uc?export=view&id=1-1_NWxUejgzyQV62eL6CZv_7i_4kvvcM"
+              alt="Early concept sketches for modular bamboo hydroponic system"
+            />
             <div class="gallery-caption">
               Early concept sketches by Mengyuan Xiong exploring magnet-based connections between bamboo-inspired modules and
               tensioned cables to keep end caps aligned and sealed.
@@ -421,7 +897,6 @@
           circulation behavior across one or more modules.
         </p>
 
-        <!-- 🎉 YOUR GOOGLE DRIVE VIDEO IS EMBEDDED BELOW -->
         <div class="video-wrapper">
           <iframe
             src="https://drive.google.com/file/d/1oS7DeAI7sOU68I0Me1DQ6ejw9zW1p3Mr/preview"
@@ -448,19 +923,16 @@
         </p>
 
         <div class="process-timeline">
-
-          <!-- Round 1 -->
           <div class="process-item">
             <div class="process-dot"></div>
-            <div class="process-item-sub">Round 1 · Concept & Ideation</div>
-            <div class="process-item-title">Brainstorming & Bamboo as Design Language</div>
+            <div class="process-item-sub">Round 1 · Concept &amp; Ideation</div>
+            <div class="process-item-title">Brainstorming &amp; Bamboo as Design Language</div>
             <p>
               We explored how bamboo could be used not only as a visual motif, but also as structural inspiration
               for modular hydroponic design—a calm, natural form that fits comfortably on a wall.
             </p>
           </div>
 
-          <!-- Round 2 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 2 · Early Sketching</div>
@@ -471,7 +943,6 @@
             </p>
           </div>
 
-          <!-- Round 3 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 3 · Rethinking Water Storage</div>
@@ -482,7 +953,6 @@
             </p>
           </div>
 
-          <!-- Round 4 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 4 · End Cap Experiments</div>
@@ -493,18 +963,16 @@
             </p>
           </div>
 
-          <!-- Round 5 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 5 · Nozzle Mechanism</div>
-            <div class="process-item-title">Leak Testing & Spring Valve Integration</div>
+            <div class="process-item-title">Leak Testing &amp; Spring Valve Integration</div>
             <p>
               Iterations explored tube tightness, leak prevention, screw-based actuation, and a twist mechanism
               for more reliable sealing.
             </p>
           </div>
 
-          <!-- Round 6 -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Round 6 · Spring Valve Refinement</div>
@@ -515,10 +983,9 @@
             </p>
           </div>
 
-          <!-- Round 7 -->
           <div class="process-item">
             <div class="process-dot"></div>
-            <div class="process-item-sub">Round 7 · Plant Growth & Automation</div>
+            <div class="process-item-sub">Round 7 · Plant Growth &amp; Automation</div>
             <div class="process-item-title">Toward ~95% Automation</div>
             <p>
               We tested germination directly in the system, optimized water/oxygen/nutrient balance, and
@@ -526,33 +993,32 @@
             </p>
           </div>
 
-          <!-- Reflection -->
           <div class="process-item">
             <div class="process-dot"></div>
             <div class="process-item-sub">Reflection</div>
-            <div class="process-item-title">Successes, Challenges & Learnings</div>
+            <div class="process-item-title">Successes, Challenges &amp; Learnings</div>
             <p>
               Iterating on valves, caps, and mechanisms taught us how small design changes affect durability,
               sealing, manufacturability, and user experience. With more time, we would refine lighting automation,
               basin plumbing integration, and lower-cost manufacturing paths.
             </p>
           </div>
-
         </div>
       </section>
-            <!-- TECH & MATERIALS -->
+
+      <!-- TECH & MATERIALS -->
       <section id="tech">
         <div class="section-header">
           <div class="section-title">
             <span class="icon">🛠️</span>
             <span>Technology, Materials &amp; Components</span>
           </div>
-          <div class="section-kicker">Hardware, Electronics & Software</div>
+          <div class="section-kicker">Hardware, Electronics &amp; Software</div>
         </div>
 
         <div class="two-col">
           <div>
-            <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Key Hardware & Electronics</h3>
+            <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Key Hardware &amp; Electronics</h3>
             <ul>
               <li>4.0” and 3.0” bamboo shoots serving as the hydroponic module shells.</li>
               <li>Submersible water pump for circulating nutrient solution.</li>
@@ -571,7 +1037,7 @@
               <div class="pill-small">Grow lights</div>
             </div>
 
-            <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1rem;">Software & Design Tools</h3>
+            <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1rem;">Software &amp; Design Tools</h3>
             <ul>
               <li><strong>Fusion 360</strong> — 3D modeling end caps, nozzles, valves.</li>
               <li><strong>Adobe Illustrator</strong> — SVG layout and laser-cut patterns.</li>
@@ -579,7 +1045,6 @@
             </ul>
           </div>
 
-          <!-- TABLE -->
           <div>
             <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Component Cost Breakdown</h3>
             <div class="table-wrap">
@@ -601,7 +1066,7 @@
                   <tr><td>Rigid tubing (96 mm ID)</td><td>$13.99</td><td>1</td><td>$13.99</td><td>End cap testing</td></tr>
                   <tr><td>Rigid tubing (76 mm ID)</td><td>$9.99</td><td>1</td><td>$9.99</td><td>Alternate geometry</td></tr>
                   <tr><td>Gasket material</td><td>$15.68</td><td>1</td><td>$15.68</td><td>Seal fabrication</td></tr>
-                  <tr><td>M6 rubber washers</td><td>$7.10</td><td>1</td><td>$7.10</td><td>Vibration & sealing</td></tr>
+                  <tr><td>M6 rubber washers</td><td>$7.10</td><td>1</td><td>$7.10</td><td>Vibration &amp; sealing</td></tr>
                   <tr><td>Variety seeds</td><td>$9.94</td><td>1</td><td>$9.94</td><td>Plant growth testing</td></tr>
                   <tr><td>Submersible pump</td><td>$21.96</td><td>1</td><td>$21.96</td><td>Circulation system</td></tr>
                   <tr><td>LED grow light</td><td>$9.80</td><td>1</td><td>$9.80</td><td>Indoor lighting</td></tr>
@@ -626,9 +1091,9 @@
         <div class="section-header">
           <div class="section-title">
             <span class="icon">⚙️</span>
-            <span>Challenges & Innovative Directions</span>
+            <span>Challenges &amp; Innovative Directions</span>
           </div>
-          <div class="section-kicker">What We Struggled With & What’s Next</div>
+          <div class="section-kicker">What We Struggled With &amp; What’s Next</div>
         </div>
 
         <div class="two-col">
@@ -682,7 +1147,7 @@
         <div class="team-grid">
           <div class="team-card">
             <div class="team-name">Pranav Chowdary Devabathini</div>
-            <div class="team-role">System Integration & Electronics</div>
+            <div class="team-role">System Integration &amp; Electronics</div>
             <div class="team-text">
               Integrated the pump, power systems, and control electronics. Validated water-flow behavior and
               documented the full build process and experiments.
@@ -691,7 +1156,7 @@
 
           <div class="team-card">
             <div class="team-name">Josh D. Kirby</div>
-            <div class="team-role">Mechanical Design & Basin Architecture</div>
+            <div class="team-role">Mechanical Design &amp; Basin Architecture</div>
             <div class="team-text">
               Explored basin-based hydroponic reservoirs, connection geometry, and structural layout for modular,
               scalable installations.
@@ -700,7 +1165,7 @@
 
           <div class="team-card">
             <div class="team-name">Mengyuan (Yuan) Xiong</div>
-            <div class="team-role">Concept Sketching & Visual Design</div>
+            <div class="team-role">Concept Sketching &amp; Visual Design</div>
             <div class="team-text">
               Led early sketches, explored magnet-based connections, and shaped BambooFlow’s calm, natural
               bamboo-inspired aesthetic.
@@ -714,14 +1179,14 @@
         <div class="section-header">
           <div class="section-title">
             <span class="icon">🔗</span>
-            <span>Links, References & Further Reading</span>
+            <span>Links, References &amp; Further Reading</span>
           </div>
           <div class="section-kicker">External Resources</div>
         </div>
 
         <div class="two-col">
           <div>
-            <h3 style="margin-bottom: .4rem;">Research & Inspiration</h3>
+            <h3 style="margin-bottom: .4rem;">Research &amp; Inspiration</h3>
             <ul>
               <li>
                 Gasket selection guide:
@@ -729,7 +1194,7 @@
                   What Is The Correct Gasket Material For Your Next Project?
                 </a>
               </li>
-              <li>Hydroponics learning resources & online plant-care guides.</li>
+              <li>Hydroponics learning resources &amp; online plant-care guides.</li>
               <li>Comparable indoor garden and modular agriculture systems.</li>
             </ul>
 
@@ -761,7 +1226,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- FOOTER -->
